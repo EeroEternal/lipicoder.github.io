@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>mock - Magicbag - Python useful tools library</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.4.2, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../css/style.min.css" rel="stylesheet">
+<link href="../assets/_mkdocstrings.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href=".." target="_blank" class="custom-link">Magicbag - Python useful tools library</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="..">Magicbag Intro</a>
+<li class="header">Library Reference</li>
+
+<li>
+<a href="./" class="active">mock</a>
+</li>
+
+<li>
+<a href="../string/" class="">string</a>
+</li>
+
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="mock-module">mock module</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+<a id="src.magicbag.mock"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Magicbag mock init file.</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.magicbag.mock.random_date" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">random_date</span><span class="p">(</span><span class="n">start_year</span><span class="o">=</span><span class="mi">1970</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2021</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a random date.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>start_year</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>start year</p></td>
+          <td>
+                <code>1970</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>end_year</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>end year</p></td>
+          <td>
+                <code>2021</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>datatime.<span title="datatime.date">date</span></code>
+          </td>
+          <td><p>datetime.date object</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/magicbag/mock/date.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">random_date</span><span class="p">(</span><span class="n">start_year</span><span class="o">=</span><span class="mi">1970</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2021</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a random date.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        start_year (int): start year</span>
+<span class="sd">        end_year (int): end year</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (datatime.date): datetime.date object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">date</span><span class="p">(</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">),</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.magicbag.mock.random_datetime" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">random_datetime</span><span class="p">(</span><span class="n">start_year</span><span class="o">=</span><span class="mi">1970</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2021</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="s1">&#39;UTC&#39;</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a random datetime.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>start_year</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>start year</p></td>
+          <td>
+                <code>1970</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>end_year</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>end year</p></td>
+          <td>
+                <code>2021</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>timezone</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>timezone</p></td>
+          <td>
+                <code>&#39;UTC&#39;</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>datatime.<span title="datatime.datetime">datetime</span></code>
+          </td>
+          <td><p>datetime.datetime object</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/magicbag/mock/date.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">random_datetime</span><span class="p">(</span><span class="n">start_year</span><span class="o">=</span><span class="mi">1970</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2021</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a random datetime.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        start_year (int): start year</span>
+<span class="sd">        end_year (int): end year</span>
+<span class="sd">        timezone (str): timezone</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (datatime.datetime): datetime.datetime object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">timezone</span> <span class="o">=</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">datetime</span><span class="p">(</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">),</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">23</span><span class="p">),</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">),</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">),</span>
+        <span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.magicbag.mock.random_decimal" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">random_decimal</span><span class="p">(</span><span class="n">precision</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a random decimal.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>precision</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>precision</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>scale</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>scale</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>decimal.<span title="decimal.Decimal">Decimal</span></code>
+          </td>
+          <td><p>decimal.Decimal object</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/magicbag/mock/decimal.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">random_decimal</span><span class="p">(</span><span class="n">precision</span><span class="p">,</span> <span class="n">scale</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a random decimal.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        precision (int): precision</span>
+<span class="sd">        scale (int): scale</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (decimal.Decimal): decimal.Decimal object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># random decimal with precision and scale</span>
+    <span class="k">with</span> <span class="n">decimal</span><span class="o">.</span><span class="n">localcontext</span><span class="p">()</span> <span class="k">as</span> <span class="n">ctx</span><span class="p">:</span>
+        <span class="n">ctx</span><span class="o">.</span><span class="n">prec</span> <span class="o">=</span> <span class="n">precision</span>
+
+        <span class="c1"># error</span>
+        <span class="k">if</span> <span class="n">precision</span> <span class="o">&lt;</span> <span class="n">scale</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;precision &lt; scale&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="c1"># avoid randint end with 0, Decimal will less one or more</span>
+        <span class="n">fraction</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">scale</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">scale</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># pass end with 0 and 5</span>
+        <span class="k">while</span> <span class="n">fraction</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">fraction</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">scale</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">scale</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># return random decimal with precision and scale</span>
+
+        <span class="c1"># int part length</span>
+        <span class="n">int_length</span> <span class="o">=</span> <span class="n">precision</span> <span class="o">-</span> <span class="n">scale</span>
+
+        <span class="c1"># random int between 0 and 10 ** int_length</span>
+        <span class="n">integer</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">int_length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">10</span><span class="o">**</span><span class="n">int_length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">decimal_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">integer</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">fraction</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">return</span> <span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">(</span><span class="n">decimal_str</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.magicbag.mock.random_fixed_int" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">random_fixed_int</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">negative</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate fix length random int.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>length</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>fix length</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>negative</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>if True, can generate negative int</p></td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="return">
+  <summary>Return</summary>
+  <p>(int): random int</p>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>src/magicbag/mock/int.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">random_fixed_int</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">negative</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate fix length random int.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        length (int): fix length</span>
+<span class="sd">        negative (bool): if True, can generate negative int</span>
+<span class="sd">    Return:</span>
+<span class="sd">        (int): random int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># generate positive fixed length int</span>
+    <span class="n">positive</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># if negative is True, return positive or negative int</span>
+    <span class="k">if</span> <span class="n">negative</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="n">positive</span>
+
+        <span class="k">return</span> <span class="o">-</span><span class="n">positive</span>
+
+    <span class="c1"># not negative return positive</span>
+    <span class="k">return</span> <span class="n">positive</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.magicbag.mock.random_timestamp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">random_timestamp</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="s1">&#39;Asia/Shanghai&#39;</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1970</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2021</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a random timestamp.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>unit</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>unit. "s" or "ms" or "us"</p></td>
+          <td>
+                <code>&#39;s&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>timezone</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>timezone str. default "Asia/Shanghai"</p></td>
+          <td>
+                <code>&#39;Asia/Shanghai&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>start_year</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>start year</p></td>
+          <td>
+                <code>1970</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>end_year</code></td>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>end year</p></td>
+          <td>
+                <code>2021</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="src.magicbag.mock.int">int</span></code>
+          </td>
+          <td><p>timestamp</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/magicbag/mock/time.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">random_timestamp</span><span class="p">(</span>
+    <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">timezone</span><span class="o">=</span><span class="s2">&quot;Asia/Shanghai&quot;</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1970</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2021</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a random timestamp.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        unit (str): unit. &quot;s&quot; or &quot;ms&quot; or &quot;us&quot;</span>
+<span class="sd">        timezone (str): timezone str. default &quot;Asia/Shanghai&quot;</span>
+<span class="sd">        start_year (int): start year</span>
+<span class="sd">        end_year (int): end year</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        (int): timestamp</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># return as second count</span>
+    <span class="n">second_result</span> <span class="o">=</span> <span class="n">random_datetime</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">,</span> <span class="n">timezone</span><span class="p">)</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">&quot;ms&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">second_result</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s2">&quot;us&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">second_result</span> <span class="o">*</span> <span class="mi">1000000</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">second_result</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div><p>:members:</p>
+<ul>
+<li>date</li>
+<li>decimal</li>
+<li>int</li>
+<li>time</li>
+</ul>
+
+
+</section>
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../js/main.js"></script>
+<script src="../js/gitbook.min.js"></script>
+<script src="../js/theme.min.js"></script>
+</body>
+</html>
